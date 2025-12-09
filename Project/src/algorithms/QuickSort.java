@@ -33,9 +33,6 @@ public class QuickSort {
 			quickSort(arr, low, pi - 1);
 			quickSort(arr, pi + 1, high);
 
-			for (int val : arr) {
-				System.out.println("Sorted Array : " + val);
-			}
 		}
 	}
 
