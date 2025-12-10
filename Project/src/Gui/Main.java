@@ -1,10 +1,16 @@
 package Gui;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
+
+import algorithms.BubbleSort;
+import algorithms.QuickSort;
 
 public class Main {
 	public static void main(String[] arg) {
@@ -14,7 +20,7 @@ public class Main {
 		frame.setLayout(null);
 		frame.setResizable(false);
 		
-		//label
+		//label input
 		JLabel lb1 = new JLabel("Input Numbers");
 		lb1.setBounds(30,30,150,30);
 		frame.add(lb1);
@@ -34,6 +40,37 @@ public class Main {
 		JComboBox<String> box  = new JComboBox<>(Algorithms);
 		box.setBounds(350, 30, 80, 30);
 		frame.add(box);
+		
+		//label result
+		JLabel lb2 = new JLabel("Result");
+		lb2.setBounds(30,160,200,30);
+		frame.add(lb2);
+		
+		button.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				String text = txt.getText(); 
+				String[] t = text.trim().split("\\s+");
+				
+				int[] numbers = new int[t.length];
+                for (int i = 0; i < t.length; i++) {
+                    numbers[i] = Integer.parseInt(t[i]); 
+                }
+//                String algorithm = (String) box.getSelectedItem();
+//                if(algorithm.equals("Bubble Sort")){
+//                	new BubbleSort().sort(numbers);
+//                }
+///                	else {
+//             	new QuickSort().quickSort(numbers);
+//               }
+//                String result = "";
+//                for(int i:numbers) {
+//                	result += i + "  ";
+//                }
+//                lb2.setText("result: " + result);
+//			}
+		});
+		
 		
 		
 		frame.setVisible(true);
