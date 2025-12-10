@@ -31,6 +31,7 @@ public class BubbleSort {
 		
 	}
 	
+	//toString method
 	public static void printArray(int arr[]){
         int i;
         for (i=0; i < arr.length; i++)
@@ -40,3 +41,4 @@ public class BubbleSort {
     }
 
 }
+
