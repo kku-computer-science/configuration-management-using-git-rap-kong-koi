@@ -43,7 +43,7 @@ public class Main {
 		
 		//label result
 		JLabel lb2 = new JLabel("Result");
-		lb2.setBounds(30,160,200,30);
+		lb2.setBounds(30,160,300,30);
 		frame.add(lb2);
 		
 		button.addActionListener(new ActionListener() {
@@ -56,19 +56,19 @@ public class Main {
                 for (int i = 0; i < t.length; i++) {
                     numbers[i] = Integer.parseInt(t[i]); 
                 }
-//                String algorithm = (String) box.getSelectedItem();
-//                if(algorithm.equals("Bubble Sort")){
-//                	new BubbleSort().sort(numbers);
-//                }
-///                	else {
-//             	new QuickSort().quickSort(numbers);
-//               }
-//                String result = "";
-//                for(int i:numbers) {
-//                	result += i + "  ";
-//                }
-//                lb2.setText("result: " + result);
-//			}
+                String algorithm = (String) box.getSelectedItem();
+                if(algorithm.equals("Bubble Sort")){
+                	new BubbleSort().sort(numbers);
+                }
+               	else {
+               		new QuickSort().sort(numbers);
+                }
+                String result = "";
+                for(int i:numbers) {
+                	result += i + "  ";
+                }
+                lb2.setText("result: " + result);
+			}
 		});
 		
 		
